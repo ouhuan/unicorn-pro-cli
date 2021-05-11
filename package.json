@@ -1,0 +1,16 @@
+{
+  "name": "unicorn-pro-cli",
+  "version": "1.0.0",
+  "author": "liuhuan",
+  "description": "Vue cli 4.x plugin for unicorn-pro preset.",
+  "keywords": [
+    "unicorn-pro",
+    "vue",
+    "vue-cli",
+    "plugin",
+    "cli"
+  ],
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {}
+}

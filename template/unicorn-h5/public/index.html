@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no, email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" href="<%%= BASE_URL %%>favicon.ico">
+    <title><%%= htmlWebpackPlugin.options.title %%></title>
+    <%% if (NODE_ENV !== 'production') { %%>
+      <%%= require('html-loader?minimize!../tmpl/vconsole.tmpl') %%>
+    <%% } %%>
+  </head>
+  <body>
+    <div id="app"><%%= require('html-loader?minimize!../tmpl/loading/spinner.html') %%></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

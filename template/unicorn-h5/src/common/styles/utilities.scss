@@ -1,0 +1,73 @@
+
+.hairline-bottom {
+  position: relative;
+  &:after {
+    content: ' ';
+    position: absolute;
+    background-color: #e5e5e5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+  }
+}
+
+.hairline-top {
+  position: relative;
+  &:after {
+    content: ' ';
+    position: absolute;
+    background-color: #e5e5e5;
+    right: 0;
+    left: 0;
+    height: 1px;
+    top: 0px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+  }
+}
+
+// 全边框,可以加圆角
+.border-1px {
+  position: relative;
+  &:before {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    // z-index: -1;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    transform-origin: left top;
+    transform: scale(0.5);
+  }
+}
+
+// 多行隐藏
+@mixin more-line-hidden($clamp: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin image-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

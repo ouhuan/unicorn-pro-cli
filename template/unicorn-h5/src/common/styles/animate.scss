@@ -1,0 +1,143 @@
+$animation-duration-base: 0.3s;
+$animation-duration-fast: 0.2s;
+$animation-timing-function-enter: ease-out;
+$animation-timing-function-leave: ease-in;
+
+
+@keyframes app-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes app-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes app-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes app-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes app-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes app-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes app-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes app-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes app-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes app-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes app-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-fade {
+  &-enter-active {
+    animation: $animation-duration-base app-fade-in both
+    $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: $animation-duration-base app-fade-out both
+      $animation-timing-function-leave;
+  }
+}
+
+.app-slide-up {
+  &-enter-active {
+    animation: app-slide-up-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: app-slide-up-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.app-slide-down {
+  &-enter-active {
+    animation: app-slide-down-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: app-slide-down-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.app-slide-left {
+  &-enter-active {
+    animation: app-slide-left-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: app-slide-left-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
+
+.app-slide-right {
+  &-enter-active {
+    animation: app-slide-right-enter $animation-duration-base both
+      $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: app-slide-right-leave $animation-duration-base both
+      $animation-timing-function-leave;
+  }
+}
