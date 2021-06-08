@@ -36,6 +36,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-mixed-operators': 'off',
     'consistent-return': 'off',
-    'guard-for-in': 'off'
+    'guard-for-in': 'off',
+    'import/extensions': 'off'
   },
 };
